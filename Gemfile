@@ -86,7 +86,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "mock_redis", "~> 0.40"
-  gem "rspec-sidekiq", "~> 4.1"
+  gem "rspec-sidekiq", "~> 5.3"
   gem "webmock", "~> 3.23"
   gem "capybara"
   gem "selenium-webdriver"
