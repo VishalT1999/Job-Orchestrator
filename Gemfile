@@ -19,7 +19,7 @@ gem "jbuilder"
 
 gem "sidekiq", "~> 7.2"
 
-gem "sidekiq-scheduler", "~> 5.0"
+gem "sidekiq-scheduler", "~> 6.0"
 
 # Redis
 gem "redis", "~> 5.0"

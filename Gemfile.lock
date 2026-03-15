@@ -380,10 +380,9 @@ GEM
       logger
       rack (>= 2.2.4)
       redis-client (>= 0.22.2)
-    sidekiq-scheduler (5.0.6)
+    sidekiq-scheduler (6.0.1)
       rufus-scheduler (~> 3.2)
-      sidekiq (>= 6, < 8)
-      tilt (>= 1.4.0, < 3)
+      sidekiq (>= 7.3, < 9)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -435,7 +434,6 @@ GEM
     thruster (0.1.19-aarch64-linux)
     thruster (0.1.19-arm64-darwin)
     thruster (0.1.19-x86_64-linux)
-    tilt (2.7.0)
     timecop (0.9.10)
     timeout (0.6.1)
     tsort (0.2.0)
@@ -505,7 +503,7 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers (~> 6.0)
   sidekiq (~> 7.2)
-  sidekiq-scheduler (~> 5.0)
+  sidekiq-scheduler (~> 6.0)
   simplecov
   solid_cable
   solid_cache
