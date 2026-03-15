@@ -6,7 +6,7 @@ and exponential-backoff retries.
 
 ## Stack
 
-- **Ruby** 3.2.2 / **Rails** 7.1
+- **Ruby** 3.4.4 / **Rails** 8.1.2
 - **MySQL** 8.0 — source of truth for all job state
 - **Redis** 7.0 — acceleration layer (queues, locks, heartbeats, VFT counters)
 - **Sidekiq** 7.2 + **sidekiq-scheduler** — background workers and cron
@@ -15,7 +15,7 @@ and exponential-backoff retries.
 
 ## Requirements
 
-- Ruby 3.2.2
+- Ruby 3.4.4
 - MySQL 8.0+
 - Redis 7.0+
 

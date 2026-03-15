@@ -2,6 +2,7 @@
 module Api
   module V1
     class JobsController < ApplicationController
+      skip_before_action :verify_authenticity_token
       before_action :set_job, only: %i[show]
 
       # POST /jobs
@@ -13,10 +14,10 @@ module Api
         RateLimiter.new.check!(client_id)
 
         # Provision client row if first time we've seen this client_id
-        Client.find_or_provision!(client_id)
+        client = Client.find_or_provision!(client_id)
 
         job = Job.new(
-          client_id: client_id,
+          client_id: client.id,
           priority:  job_params[:priority] || "medium",
           workload:  job_params[:workload]
         )
@@ -27,7 +28,7 @@ module Api
           JobDispatcherWorker.perform_async
 
           render json: {
-            id:         job.id,
+            job_id:         job.id,
             client_id:  job.client_id,
             priority:   job.priority,
             workload:   job.workload,

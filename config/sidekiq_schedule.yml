@@ -1,0 +1,12 @@
+# config/sidekiq_schedule.yml
+heartbeat_monitor:
+  cron: "*/15 * * * * *"   # every 15 seconds
+  class: HeartbeatMonitorWorker
+  queue: monitor
+  description: "Detect and stall jobs that have missed heartbeats"
+
+job_dispatcher:
+  cron: "*/5 * * * * *"    # every 5 seconds
+  class: JobDispatcherWorker
+  queue: scheduler
+  description: "Pick runnable jobs and dispatch them to executor workers"
