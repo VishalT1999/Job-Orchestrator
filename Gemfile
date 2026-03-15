@@ -72,7 +72,7 @@ group :development, :test do
   gem "factory_bot_rails", "~> 6.4"
   gem "faker", "~> 3.2"
   gem "database_cleaner-active_record", "~> 2.1"
-  gem "shoulda-matchers", "~> 6.0"
+  gem "shoulda-matchers", "~> 7.0"
   gem "timecop", "~> 0.9"
   gem "simplecov", require: false
 end
