@@ -374,12 +374,12 @@ GEM
       websocket (~> 1.0)
     shoulda-matchers (6.5.0)
       activesupport (>= 5.2.0)
-    sidekiq (7.3.9)
+    sidekiq (7.3.10)
       base64
-      connection_pool (>= 2.3.0)
+      connection_pool (>= 2.3.0, < 3)
       logger
-      rack (>= 2.2.4)
-      redis-client (>= 0.22.2)
+      rack (>= 2.2.4, < 3.3)
+      redis-client (>= 0.23.0, < 1)
     sidekiq-scheduler (5.0.6)
       rufus-scheduler (~> 3.2)
       sidekiq (>= 6, < 8)
@@ -504,7 +504,7 @@ DEPENDENCIES
   rubocop-rails-omakase
   selenium-webdriver
   shoulda-matchers (~> 6.0)
-  sidekiq (~> 7.2)
+  sidekiq (~> 7.3)
   sidekiq-scheduler (~> 5.0)
   simplecov
   solid_cable
