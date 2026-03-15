@@ -1,0 +1,14 @@
+# config/sidekiq.yml
+:concurrency: 20
+:queues:
+  - [monitor, 10]
+  - [scheduler, 10]
+  - [executor, 5]
+  - [default, 1]
+
+# Queue notes:
+#   monitor   - HeartbeatMonitorWorker; must run promptly, high priority
+#   scheduler - JobDispatcherWorker + RetryJobWorker; single logical flow
+#   executor  - JobExecutorWorker; long-running, low Sidekiq concurrency
+#                because each job spins its own thread for heartbeat pulsing
+#   default   - catch-all for Rails mailers, etc.
