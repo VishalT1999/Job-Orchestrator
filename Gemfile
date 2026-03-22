@@ -23,7 +23,7 @@ gem "sidekiq-scheduler", "~> 5.0"
 
 # Redis
 gem "redis", "~> 5.0"
-gem "redis-client", "~> 0.19"
+gem "redis-client", "~> 0.28"
 gem "connection_pool", "~> 2.4"
 
 gem "redlock", "~> 2.0"
